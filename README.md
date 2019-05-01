@@ -1,6 +1,8 @@
 # ReplaceG2O
 
-An experimental Chrome extension to replace embedded Google map to OpenStreetMap
+This is an EXPERIMENTAL Chrome extension to replace embedded Google map to OpenStreetMap.
+
+No maintainance, maybe.
 
 ## Movie example
 
