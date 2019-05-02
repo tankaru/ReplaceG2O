@@ -58,14 +58,14 @@ chrome.extension.onRequest.addListener(
     for (var i = 0; i < elms.length; i++) {
       var elm = elms.item(i);
       var url = String(elm.getAttribute('src'));
-      [success, z, lon, lat] = url.match(/!1d(-?\d[0-9.]*)!2d(-?\d[0-9.]*)!3d(-?\d[0-9.]*)/);
+      var [success, z, lon, lat] = url.match(/!1d(-?\d[0-9.]*)!2d(-?\d[0-9.]*)!3d(-?\d[0-9.]*)/);
       //extract zoom, lon, lat values from embedded google map url
       //zoom value is satellite view style, need to convert
 
       //alert(success);
 
       if (success !== null) {
-        [mapleft, mapbottom, mapright, maptop] = bbox(Number(lat), Number(lon), zoom(z));
+        var [mapleft, mapbottom, mapright, maptop] = bbox(Number(lat), Number(lon), zoom(z));
         //alert([mapleft, mapbottom, mapright, maptop]);
         var osmurl = 'https://www.openstreetmap.org/export/embed.html?bbox=' + mapleft + '%2C' + mapbottom + '%2C' + mapright + '%2C' + maptop + '&amp;layer=mapnik';
         elm.setAttribute('src', osmurl);
