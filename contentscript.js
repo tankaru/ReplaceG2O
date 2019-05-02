@@ -49,7 +49,7 @@ function zoom(satelliteZoom) {
 }
 
 
-chrome.extension.onRequest.addListener(
+chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
 
     var elms = document.querySelectorAll('iframe[src]');

@@ -19,5 +19,11 @@
   },
   "permissions": [
     "tabs"
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ReplaceG2O@tankaru",
+      "strict_min_version": "55.0"
+    }
+  }
 }
